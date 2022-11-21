@@ -53,7 +53,7 @@ function Clock() {
     alarmTime === `0${new Date().getHours()}:0${new Date().getMinutes()}`) {
 
     isON.current = 'Yes'
-    console.log('Alarm Time');
+    // console.log('Alarm Time');
     // if (audio !== undefined) {
     //   audio.play()
     //     .then(_ => {
