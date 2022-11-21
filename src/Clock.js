@@ -8,7 +8,7 @@ function Clock() {
   let dateVal = new Date().getDate()
   let dayVal = new Date().getDay()
   let atime = document.querySelector('#alarm-time')
-  let audio = new Audio('alarm.wav')
+  // let audio = new Audio('alarm.wav')
 
   const [secRatio, setSecRatio] = useState(0)
   const [minRatio, setMinRatio] = useState(0)
@@ -54,15 +54,15 @@ function Clock() {
 
     isON.current = 'Yes'
     console.log('Alarm Time');
-    if (audio !== undefined) {
-      audio.play()
-        .then(_ => {
-          // autoplay started
-        })
-        .catch(err => {
-          // console.info(err)
-        })
-    }
+    // if (audio !== undefined) {
+    //   audio.play()
+    //     .then(_ => {
+    //       // autoplay started
+    //     })
+    //     .catch(err => {
+    //       // console.info(err)
+    //     })
+    // }
   }
 
   else{
@@ -97,7 +97,7 @@ function Clock() {
         <input type="time" disabled={disabled} id="alarm-time" />
         <button className="btn" onClick={Btn}>{text}</button>
         <span className='status'>Alarm Ringing: {isON.current}</span>
-        <audio className='aud' src="alarm.wav"></audio>
+        {/* <audio className='aud' src="alarm.wav"></audio> */}
       </div>
       <Link to='/timer' className='link'>Go to Analogue Timer</Link>
     </div>
